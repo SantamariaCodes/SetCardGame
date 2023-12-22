@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F0B5E2D2B3242200092B242 /* SetCardGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B5E2C2B3242200092B242 /* SetCardGameApp.swift */; };
 		9F0B5E2F2B3242200092B242 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B5E2E2B3242200092B242 /* ContentView.swift */; };
 		9F0B5E312B3242210092B242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0B5E302B3242210092B242 /* Assets.xcassets */; };
 		9F0B5E352B3242210092B242 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0B5E342B3242210092B242 /* Preview Assets.xcassets */; };
@@ -17,6 +16,11 @@
 		9F0B5E582B3242920092B242 /* CardGameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B5E572B3242920092B242 /* CardGameLogic.swift */; };
 		9F0B5E5C2B34D87D0092B242 /* SetGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B5E5B2B34D87D0092B242 /* SetGameViewModel.swift */; };
 		9F0B5E5E2B34F05B0092B242 /* CardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B5E5D2B34F05B0092B242 /* CardContent.swift */; };
+		9F0B5E652B35EE4D0092B242 /* SetCardGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B5E2C2B3242200092B242 /* SetCardGameApp.swift */; };
+		9F0B5E672B35F0D00092B242 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B5E662B35F0D00092B242 /* CardView.swift */; };
+		9F0B5E6A2B3621F90092B242 /* DiamondShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B5E692B3621F90092B242 /* DiamondShape.swift */; };
+		9F0B5E6C2B3627920092B242 /* SquiggleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B5E6B2B3627920092B242 /* SquiggleShape.swift */; };
+		9F0B5E6E2B3627D80092B242 /* OvalShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B5E6D2B3627D80092B242 /* OvalShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		9F0B5E572B3242920092B242 /* CardGameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameLogic.swift; sourceTree = "<group>"; };
 		9F0B5E5B2B34D87D0092B242 /* SetGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameViewModel.swift; sourceTree = "<group>"; };
 		9F0B5E5D2B34F05B0092B242 /* CardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContent.swift; sourceTree = "<group>"; };
+		9F0B5E662B35F0D00092B242 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9F0B5E692B3621F90092B242 /* DiamondShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondShape.swift; sourceTree = "<group>"; };
+		9F0B5E6B2B3627920092B242 /* SquiggleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquiggleShape.swift; sourceTree = "<group>"; };
+		9F0B5E6D2B3627D80092B242 /* OvalShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,10 @@
 		9F0B5E202B32421F0092B242 = {
 			isa = PBXGroup;
 			children = (
+				9F0B5E2C2B3242200092B242 /* SetCardGameApp.swift */,
+				9F0B5E622B35ED7F0092B242 /* Views */,
+				9F0B5E602B35ED6A0092B242 /* ViewModels */,
+				9F0B5E5F2B35ED5F0092B242 /* Models */,
 				9F0B5E2B2B3242200092B242 /* SetCardGame */,
 				9F0B5E3D2B3242210092B242 /* SetCardGameTests */,
 				9F0B5E472B3242210092B242 /* SetCardGameUITests */,
@@ -101,11 +113,6 @@
 		9F0B5E2B2B3242200092B242 /* SetCardGame */ = {
 			isa = PBXGroup;
 			children = (
-				9F0B5E572B3242920092B242 /* CardGameLogic.swift */,
-				9F0B5E5B2B34D87D0092B242 /* SetGameViewModel.swift */,
-				9F0B5E2C2B3242200092B242 /* SetCardGameApp.swift */,
-				9F0B5E2E2B3242200092B242 /* ContentView.swift */,
-				9F0B5E5D2B34F05B0092B242 /* CardContent.swift */,
 				9F0B5E302B3242210092B242 /* Assets.xcassets */,
 				9F0B5E322B3242210092B242 /* SetCardGame.entitlements */,
 				9F0B5E332B3242210092B242 /* Preview Content */,
@@ -136,6 +143,43 @@
 				9F0B5E4A2B3242210092B242 /* SetCardGameUITestsLaunchTests.swift */,
 			);
 			path = SetCardGameUITests;
+			sourceTree = "<group>";
+		};
+		9F0B5E5F2B35ED5F0092B242 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F0B5E572B3242920092B242 /* CardGameLogic.swift */,
+				9F0B5E5D2B34F05B0092B242 /* CardContent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F0B5E602B35ED6A0092B242 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9F0B5E5B2B34D87D0092B242 /* SetGameViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9F0B5E622B35ED7F0092B242 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F0B5E682B3621E00092B242 /* Shapes */,
+				9F0B5E2E2B3242200092B242 /* ContentView.swift */,
+				9F0B5E662B35F0D00092B242 /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F0B5E682B3621E00092B242 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				9F0B5E692B3621F90092B242 /* DiamondShape.swift */,
+				9F0B5E6B2B3627920092B242 /* SquiggleShape.swift */,
+				9F0B5E6D2B3627D80092B242 /* OvalShape.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0B5E6C2B3627920092B242 /* SquiggleShape.swift in Sources */,
 				9F0B5E582B3242920092B242 /* CardGameLogic.swift in Sources */,
+				9F0B5E652B35EE4D0092B242 /* SetCardGameApp.swift in Sources */,
+				9F0B5E6A2B3621F90092B242 /* DiamondShape.swift in Sources */,
 				9F0B5E5E2B34F05B0092B242 /* CardContent.swift in Sources */,
+				9F0B5E6E2B3627D80092B242 /* OvalShape.swift in Sources */,
 				9F0B5E2F2B3242200092B242 /* ContentView.swift in Sources */,
-				9F0B5E2D2B3242200092B242 /* SetCardGameApp.swift in Sources */,
+				9F0B5E672B35F0D00092B242 /* CardView.swift in Sources */,
 				9F0B5E5C2B34D87D0092B242 /* SetGameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

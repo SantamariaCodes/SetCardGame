@@ -2,6 +2,7 @@
 import SwiftUI
 
 class SetGameViewModel: ObservableObject {
+    // this needs to be changed if im not mistaken
     @Published private var model: CardGame<CardContent> = SetGameViewModel.createSetGame()
 
     var cards: Array<CardGame<CardContent>.Card> {
@@ -14,14 +15,9 @@ class SetGameViewModel: ObservableObject {
 
     private static func createSetGame() -> CardGame<CardContent> {
         let allCards = [
-            CardContent(color: .red, shape: .diamond, filler: .solid, numberOfShapes: 1),
-            CardContent(color: .green, shape: .oval, filler: .striped, numberOfShapes: 2),
-            CardContent(color: .blue, shape: .squiggle, filler: .open, numberOfShapes: 3),
-            CardContent(color: .red, shape: .oval, filler: .open, numberOfShapes: 3),
-            CardContent(color: .green, shape: .diamond, filler: .solid, numberOfShapes: 1)
-            // Add more combinations as desired
+            CardContent(color: .red, shape: .diamond, numberOfShapes: 1),
+            
         ]
-
         return CardGame<CardContent>(numberOfCards: allCards.count) { index in
             allCards[index]
         }
