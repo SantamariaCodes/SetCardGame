@@ -19,11 +19,19 @@ struct SquiggleShape: Shape {
 
         return path
     }
+
+    func view(fillerColor: Color) -> some View {
+        ZStack {
+            self.fill(fillerColor)
+            self.stroke(Color.black, lineWidth: 3)
+        }
+    }
 }
 
 struct SquiggleShape_Previews: PreviewProvider {
     static var previews: some View {
         SquiggleShape()
+            .view(fillerColor: .blue)
             .frame(width: 100, height: 50)
             .previewLayout(.sizeThatFits)
     }

@@ -15,7 +15,7 @@ class SetGameViewModel: ObservableObject {
 
     private static func createSetGame() -> CardGame<CardContent> {
         let allCards = [
-            CardContent(color: .red, shape: .diamond, numberOfShapes: 1),
+            CardContent(color: .red, shape: .diamond, numberOfShapes: 1, filler: .solid),
             
         ]
         return CardGame<CardContent>(numberOfCards: allCards.count) { index in

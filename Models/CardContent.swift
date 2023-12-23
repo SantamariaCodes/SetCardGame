@@ -4,20 +4,24 @@ struct CardContent: Hashable {
     var color: Color
     var shape: CardShape
     var numberOfShapes: Int
+    var filler : filler
 }
+
+enum filler: Hashable { case solid, unfilled }
 
 enum CardShape: Hashable {
     case diamond, oval, squiggle
 
     @ViewBuilder
-    func view() -> some View {
+    func view(fillerColor: Color) -> some View {
         switch self {
         case .diamond:
-            DiamondShape()
+            DiamondShape().view(fillerColor: fillerColor)
         case .oval:
-            OvalShape()
+            OvalShape().view(fillerColor: fillerColor)
         case .squiggle:
-            SquiggleShape()
+            SquiggleShape().view(fillerColor: fillerColor)
         }
     }
 }
+
