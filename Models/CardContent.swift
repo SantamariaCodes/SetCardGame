@@ -1,11 +1,20 @@
 import SwiftUI
 
-struct CardContent: Hashable {
+protocol CardContentProtocol {
+    var color: Color { get }
+    var shape: CardShape { get }
+    var numberOfShapes: Int { get }
+    var filler: filler { get }
+}
+
+// Modify the existing CardContent struct to conform to CardContentProtocol
+struct CardContent: Hashable, CardContentProtocol {
     var color: Color
     var shape: CardShape
     var numberOfShapes: Int
-    var filler : filler
+    var filler: filler
 }
+
 
 enum filler: Hashable { case solid, unfilled }
 
@@ -24,4 +33,3 @@ enum CardShape: Hashable {
         }
     }
 }
-

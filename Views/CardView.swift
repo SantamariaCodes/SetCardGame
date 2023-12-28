@@ -1,10 +1,12 @@
 import SwiftUI
 
 struct CardView: View {
-    var card: CardContent
-    @State private var isSelected = false
+    @ObservedObject var viewModel: SetGameViewModel
+    let cardIndex: Int
 
     var body: some View {
+        let card = viewModel.cards[cardIndex]
+        
         ZStack {
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.white)
@@ -12,15 +14,17 @@ struct CardView: View {
                 .shadow(radius: 5)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(isSelected ? Color.blue : Color.gray, lineWidth: isSelected ? 3 : 1)
+                        .stroke(card.isSelected ? Color.blue : Color.gray, lineWidth: card.isSelected ? 3 : 1)
+                        .stroke(card.isMatched ? Color.green : Color.gray, lineWidth: card.isSelected ? 3 : 1)
+
                 )
                 .onTapGesture {
-                    isSelected.toggle()
+                    viewModel.selectCard(at: cardIndex)
                 }
 
             VStack(spacing: 10) {
-                ForEach(0..<card.numberOfShapes, id: \.self) { _ in
-                    card.shape.view(fillerColor: card.filler == .solid ? card.color : Color.white)
+                ForEach(0..<card.content.numberOfShapes, id: \.self) { _ in
+                    card.content.shape.view(fillerColor: card.content.filler == .solid ? card.content.color : Color.white)
                         .frame(width: 40, height: 40)
                         .aspectRatio(1, contentMode: .fit)
                 }
@@ -31,9 +35,5 @@ struct CardView: View {
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        let card = CardContent(color: .red, shape: .squiggle, numberOfShapes: 1, filler: .unfilled)
-        CardView(card: card)
-    }
-}
+
+
